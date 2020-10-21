@@ -37,7 +37,7 @@ app.post("/send", async (req, res) => {
       text: req.body.ExceptionReport,
     });
     console.log(mail.messageId);
-    res.status(204);
+    res.status(204).send({});
   } catch (ex) {
     console.error(ex);
   }
